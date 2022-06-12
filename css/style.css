@@ -1,0 +1,288 @@
+body{
+
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-light);
+}
+:root{
+    --bg-alpha:rgba(0, 0, 0, 0.6);
+    --clolor-white:#fff;
+    --bg-light:#e9ecef;
+    --blue:#007aff
+}
+.header{
+    background-image: url(../images/hero-bg.jpg);
+    height: 100vh;
+    background-position: center center;
+
+} 
+
+.navbar{
+    background-color: var(--bg-alpha);
+    z-index: 1;
+}
+.navbar-brand , .nav-link{
+    color: var(--clolor-white) !important;
+    font-weight: 900;
+    transition:1s;
+    position: relative;
+}
+.navbar-brand:hover {
+    color: var(--clolor-white);
+}
+.nav-link:hover{ 
+    color: var(--clolor-white);
+}
+.nav-link::before{
+    content:  " ";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    bottom: 0;
+    transition: width 1s;
+}
+.nav-link:hover::before{
+    width: 90%;
+}
+.layer-out{
+    background-color: var(--bg-alpha);
+}
+.layer-out .content h2 , .layer-out .content h3 {
+    color: var(--clolor-white);
+    font-weight: 900;
+    font-size: 4rem;
+}
+
+.layer-out .content h3::after{
+    content: '|';
+    animation: text ;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;    
+    
+}
+
+
+@keyframes text {
+    0%{content: 'P|';}
+    1.3%{ content: 'Ph|';}
+    2.6%{content: 'Pho|';}
+    3.9%{content: 'Phot|';}
+    5.2%{content: 'Photo|';}
+    6.5%{content: 'Photog|';}
+    7.8%{content: 'Photogr|';}
+    9.1%{content: 'Photogra|';} 
+    10.4%{content: 'Phorograp|';}
+    11.7%{content: 'Photograph|';}
+    13%{content: 'Photographe|';}
+    14.3%{content: 'Photographer|';}
+    15.6%{content: 'Photographer|';}
+    16.9%{content: 'Photographe|';}
+    18.2%{content: 'Photograph|';}
+    19.5%{content: 'Phorograp|';}
+    20.8%{content: 'Photogra|';}
+    22.1%{content: 'Photogr|';}
+    23.4%{content: 'Photog|';}
+    24.7%{content: 'Photo|';}
+    26%{content: 'Phot|';}
+    27.3%{content: 'Pho|';}
+    28.6%{content: 'Ph|';}
+    29.9%{content: 'P|'; }
+    31.2%{content: 'F|';}
+    32.5%{content: 'Fr|';}    
+    33.8%{content: 'Fre|';}
+    35.1%{content: 'Free|';}
+    36.4%{content: 'Freel|';}
+    237.7%{content: 'Freela|';}
+    39%{content: 'Freelan|';}
+    40.3%{content: 'Freelanc|';}
+    41.6%{content: 'Freelance|';}
+    42.9%{content: 'Freelancer|';}  
+    44.2%{content: 'Freelancer|';}  
+    45.5%{content: 'Freelance|';}
+    46.8%{content: 'Freelanc|';}
+    48.1%{content: 'Freelan|';}
+    49.4%{content: 'Freela|';}
+    50.7%{content: 'Freel|';}
+    52%{content: 'Free|';}
+    53.3%{content: 'Fre|';}
+    54.6%{content: 'Fr|';}    
+    55.9%{content: 'F|';}
+    57.2%{content: 'D|';}
+    58.5%{content: 'De|';}
+    59.8%{content: 'Dev|';}
+    61.1%{content: 'Deve|';}
+    62.4%{content: 'Devel|';}
+    63.7%{content: 'Develo|';}
+    65%{content: 'Develop|';}
+    66.3%{content: 'Develope|';}
+    67.6%{content: 'Developer|';}
+    68.9%{content: 'Developer|';}
+    71.5%{content: 'Develope|';}
+    72.8%{content: 'Develop|';}
+    74.1%{content: 'Develo|';}
+    75.4%{content: 'Devel|';}
+    76.7%{content: 'Deve|';}    
+    78%{content: 'Dev|';}
+    79.3%{content: 'De|';}   
+    80.6%{content: 'D|';}
+    81.9%{content: 'De|';}
+    83.2%{content: 'Des|';}
+    84.5%{content: 'Desi|';}
+    85.8%{content: 'Desig|';}
+    87.1%{content: 'Design|';}
+    88.4%{content: 'Designe|';}
+    89.7%{content: 'Designer|';}
+    91%{content: 'Designer|';}
+    92.3%{content: 'Designe|';}
+    93.6%{content: 'Design|';}
+    94.9%{content: 'Desig|';}
+    95.2%{content: 'Desi|';}
+    96.5%{content: 'Des|';}
+    97.3%{content: 'De|';}
+    98.6%{content: 'D|';}
+    100%{content: "|";}  
+}
+
+.about{
+    background-color: var(--bg-light);
+}
+.about .container{
+    background-color: #fff;
+    
+}
+.about .container h3{
+    font-size: 1.5rem;
+}
+.under-line{
+    position: relative;
+}
+.under-line::after{
+    content: " ";
+    position: absolute;
+    top: 110%;
+    left: 0px;
+    width: 20%;
+    height: 5px;
+    background-color: var(--blue);
+}
+.about .container .about-my p{
+    font-size: 1.2rem;
+}
+.services {
+    background-color: var(--bg-light);
+}
+.title p{
+    position: relative;
+}
+.title p::after{
+    content: " ";
+    position: absolute;
+    top: 130%;
+    left: 48%;
+    background-color: var(--blue);
+    width: 2%;
+    height: 5px;
+}
+.services .content-service {
+    background-color: var(--clolor-white);
+}
+.services .content-service .icon {
+    width: 35px;
+    height: 35px;
+    border: var(--blue) solid 10px;
+    transition: all 1s;
+}
+.services .content-service:hover .icon {
+    border: #ced4da solid 10px;
+    background-color: var(--blue);
+}
+.counter{
+    background-image: url('../images/counters-bg.jpg');
+    background-position: center center;
+    background-attachment: fixed;
+}
+.counter .lay-aout{
+    background-color: rgba(0, 122, 255, 0.6);
+}
+.counter .icon-counter {
+    width: 25px;
+    height: 25px;
+    border: 10px solid var(--clolor-white);
+}
+
+.protofolio{
+    background-color: var(--bg-light);
+}
+.protofolio .content-protofolio{
+    background-color: var(--clolor-white);
+}
+.protofolio .content-protofolio .photo{
+    
+    overflow: hidden;
+}
+.protofolio .content-protofolio .icon-add .fa-plus{
+   
+    border: 3px solid var(--blue);
+}
+.protofolio .content-protofolio img {
+    transition: 1s;
+}
+.protofolio .content-protofolio:hover img{
+    transform: scale(1.5);
+}
+
+
+.client{
+    background-image: url('../images/overlay-bg.jpg');
+    background-position: center center;
+    background-attachment: fixed;
+    
+}
+
+
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.content-travel .world-travel p{
+    background-color: #0dcaf0;
+    position: relative;
+    bottom: 10px;
+
+}
+.data img{
+    width: 35px;
+    height: 35px;
+}
+.data a {
+    text-decoration: none;
+    color: #000;
+    transition: color 1s;
+    
+}
+.data a:hover {
+    color: var(--blue);
+}
+
+
+.message {
+    background-image: url('../images/overlay-bg.jpg');
+}
+.icon-social .fa-brands{
+    border: 4px solid var(--blue);
+    transition: all 1s;
+    
+}
+.icon-social .fa-brands:hover {
+    border: 4px solid #aaa;
+    background-color: var(--blue);
+}
+
+
+@media only screen and (max-width: 992px) {
+    .nav-link:hover::before{
+        width: 0%;
+    }   
+}
